@@ -2,7 +2,7 @@ class SecretsController < ApplicationController
 
   def show 
     if !session[:name]
-    redirect_to '/sessions/login'
+    redirect_to '/login'
     end 
   end 
   
