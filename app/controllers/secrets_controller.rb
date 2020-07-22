@@ -3,11 +3,11 @@ class SecretsController < ApplicationController
   
   
   def show 
-    if !!session 
-      redirect_to '/login'
-    else 
+    if session 
       render 'secrets/show'
-    end
+    else 
+      redirect_to '/sessions/login'
+    end 
   end 
   
   
