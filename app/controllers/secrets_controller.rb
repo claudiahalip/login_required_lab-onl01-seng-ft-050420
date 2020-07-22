@@ -3,6 +3,9 @@ class SecretsController < ApplicationController
   
   
   def show 
+    if !session 
+      redirect_to '/login'
+    end
   end 
   
   
