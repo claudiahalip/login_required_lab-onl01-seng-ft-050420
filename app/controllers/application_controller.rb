@@ -6,7 +6,11 @@ class ApplicationController < ActionController::Base
    private
   
   def current_user
-    current_user ||= session[:name]
+    if session[:name]
+      session[:name]
+    end
+      
+    #current_user ||= session[:name]
   end 
   
   
