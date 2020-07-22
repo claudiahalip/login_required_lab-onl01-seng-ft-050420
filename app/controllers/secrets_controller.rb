@@ -5,6 +5,8 @@ class SecretsController < ApplicationController
   def show 
     if !!session 
       redirect_to '/login'
+    else 
+      render 'secrets/show'
     end
   end 
   
