@@ -11,9 +11,9 @@ class SecretsController < ApplicationController
   end 
   
   
-  private
+  # private
   
-  def require_login
-    return head(:forbidden ) unless session.include? :username
-  end 
+  # def require_login
+  #   return head(:forbidden ) unless session.include? :username
+  # end 
 end
