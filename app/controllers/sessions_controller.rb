@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    if params[:name]
+    
   end 
     
   def logout
