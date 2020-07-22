@@ -1,13 +1,18 @@
 class SessionsController < ApplicationController
   def new
-  end
+   end
   
-  def create
-    
+  def create 
+    if params[:name].nil? || params[:name].empty?
+      redirect_to '/login'
+    else 
+      session[:name] = params[:name]
+      redirect_to '/'
+    end
   end 
     
-  def logout
-    session.destroy :username
+  def destroy
+    session.delete :name
   end 
   
  
